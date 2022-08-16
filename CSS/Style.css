@@ -74,9 +74,9 @@ body{
 
 article{
     border: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    height: 120px;
 }
 
 .Texto__Noticia h3{
@@ -90,8 +90,10 @@ article{
 .Imagen__Noticia{
     display: flex;
     justify-content: center;
-    width: 150px;
+    align-items: center;
+    overflow: hidden;
 }
+
 
 /*estilos footer*/
 
@@ -102,7 +104,7 @@ footer{
 
 
 
-/*work in progress*/
+/*estilos pagina 3*/
 
 .Descripcion__Nosotros{
     display: grid;
@@ -115,13 +117,12 @@ footer{
     grid-template-columns: 1fr 8fr;
 }
 
-p{
+p, h3{
     margin: 10px;
 }
 
-h3{
-    margin: 10px;
-}
+
+/*estilos pagina 4*/
 
 .Redes__Sociales{
     display: grid;
@@ -132,4 +133,102 @@ h3{
 .Redes{
     display: grid;
     grid-template-columns: 1fr 8fr;
+}
+
+.Img__Redes{
+    width: 100px;
+
+}
+
+
+/*estilos mobile*/
+
+@media screen and (max-width: 500px) {
+
+    /* main */
+
+    h1{
+        font-size: 35px;
+    }
+
+    .Taza{
+        height: 25px;
+    }
+
+    .Menu__Barra{
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+    }
+
+    .btn__menu{
+        width: 80px;
+        justify-content: center;
+    }
+
+    /* main y pagina 3 */
+
+    .Imagen__Noticia{
+        order: -1;
+    }
+
+    .Imagen__Noticia img{
+        width: 100%;
+    }
+
+    article{
+        grid-template-rows: 80% 20%;
+        grid-template-columns: none;
+        overflow: hidden;
+        height: 500px;
+    }
+
+    /* pagina 4 */
+
+    .Persona{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: none;
+    }
+}
+
+/*estilos tablet*/
+
+@media screen and (min-width: 760px) and (max-width: 1024px){
+
+    /* main */
+
+     h1{
+        font-size: 75px;
+    }
+
+    .Taza{
+        height: 50px;
+    }
+
+    .Imagen__Noticia img{
+        width: 100%;
+        height: 100%;
+
+    }
+
+    /* pagina 4 */
+
+    /* .Persona{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: none;
+    } */
+
+}
+
+/*estilos escritorio*/
+
+@media screen and (min-width: 1024px) {
+
+    /* main */
+
+    .Imagen__Noticia img{
+        width: 100%;
+    }
 }

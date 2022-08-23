@@ -67,9 +67,8 @@ body{
 }
 
 .Noticias{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: grid;
+    grid-row-gap: 1px;
 }
 
 article{
@@ -77,6 +76,11 @@ article{
     display: grid;
     grid-template-columns: 8fr 1fr;
     height: 120px;
+    transition: height 0.5s;
+}
+
+article:hover{
+    height: 200px;
 }
 
 .Texto__Noticia h3{

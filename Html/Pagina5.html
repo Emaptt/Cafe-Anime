@@ -7,6 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contacto - Café Anime</title>
+        <link rel="stylesheet" href="../CSS/bootstrap.min.css">
         <link rel="stylesheet" href="../CSS/Style.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
@@ -17,116 +18,109 @@
         <header>
             
             <!--titulo-->
-            
             <div class="Portada">
-
                 <img class="Taza" src="../Img/Taza.jpg" alt="Taza">
-
                 <h1>Café Anime</h1>
-
                 <img class="Taza" src="../Img/Taza.jpg" alt="Taza">
-
             </div>
             
             <!--menu-->
-
-            <div class="container container-md container-lg">
-            <nav class="row">
-
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img class="img__logo" src="../Img/Taza__Logo.jpg" alt="Logo">
-                    </button>
-                    <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="../Index.html">Inicio</a></li>
-                    <li><a class="dropdown-item" href="./Pagina2.html">Episodios</a></li>
-                    <li><a class="dropdown-item" href="./Pagina3.html">Noticias</a></li>
-                    <li><a class="dropdown-item" href="./Pagina4.html">Nosotros</a></li>
-                    <li><a class="dropdown-item" href="./Pagina5.html">Contacto</a></li>
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="../Index.html"><img class="img__logo" src="../Img/Taza__Logo.jpg" alt="Logo"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Html/Pagina2.html">Episodios</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Html/Pagina3.html">Noticias</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Html/Pagina4.html">Nosotros</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Html/Pagina5.html">Contacto</a>
+                      </li>
                     </ul>
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                  </div>
                 </div>
-
             </nav>
-            </div>
             
-
-            
-            <!-- <nav>
-
-                <ul class="Menu__Barra">
-                    <li class="btn__menu"><a href="../Index.html"><img class="img__logo" src="../Img/Taza__Logo.jpg" alt="Logo"></a></li>
-                    <li class="btn__menu"><a href="./Pagina2.html">Episodios</a></li> 
-                    <li class="btn__menu"><a href="./Pagina3.html">Noticias</a></li>
-                    <li class="btn__menu"><a href="./Pagina4.html">Nosotros</a></li>
-                    <li class="btn__menu"><a href="./Pagina5.html">Contacto</a></li>
-                </ul>
-
-            </nav> -->
-
         </header>
 
-        <h2>Contacto</h2>
+        <main>
 
-        <h3>¡Seguinos en nuestras redes sociales!</h3>
-
-        <p>Café Anime tiene todos sus episodios completos en Spotify. Además podes ver todas las noticias y contenido que charlamos en Instagram y Twitter.</p>
+            <!-- Contacto -->
+            <h2>Contacto</h2>
+            <h3>¡Seguinos en nuestras redes sociales!</h3>
+            <p>Café Anime tiene todos sus episodios completos en Spotify. Además podes ver todas las noticias y contenido que charlamos en Instagram y Twitter.</p>
         
-        <!--redes sociales-->
+            <!--redes sociales-->
+            <section class="Redes__Sociales">
+
+                <div class="Redes">
+                    <div class="Img__Redes">
+                        <img src="../Img/Spotify.png" alt="Spotify logo">
+                    </div>
+                    <div class="Descripcion__Redes">
+                        Spotify/cafeanime
+                    </div>
+                </div>
         
-        <section class="Redes__Sociales">
+                <div class="Redes">
+                    <div class="Img__Redes">
+                        <img src="../Img/Instagramm.png" alt="Spotify logo">
+                    </div>
+                    <div class="Descripcion__Redes">
+                        Instagram/cafeanimepod
+                    </div>
+                </div>
+        
+                <div class="Redes">
+                    <div class="Img__Redes">
+                        <img src="../Img/Twitter.png" alt="Spotify logo">
+                    </div>
+                    <div class="Descripcion__Redes">
+                        Twitter/cafeanimepod
+                    </div>
+                </div>
+        
+            </section>
 
-            <div class="Redes">
+            <!--formulario contacto-->
+            <h3>¿Nos querés escribir algo? ¡Queremos leerte!</h3>
+            <p>Completa este simple formulario y te vamos a estar respondiendo ASAP!!</p>
+            <section class="Formulario">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Escribí tu mail aca">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">¿Qué nos querés contar?</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="Btn__Formulario">
+                <input class="btn btn-primary" type="submit" value="Enviar">
+                </div>
+            </section>
 
-                <div class="Img__Redes">
-                    <img src="../Img/Spotify.png" alt="Spotify logo">
-                </div>
-    
-                <div class="Descripcion__Redes">
-                    Spotify/cafeanime
-                </div>
-    
-            </div>
-    
-            <div class="Redes">
-    
-                <div class="Img__Redes">
-                    <img src="../Img/Instagramm.png" alt="Spotify logo">
-                </div>
-    
-                <div class="Descripcion__Redes">
-                    Instagram/cafeanimepod
-                </div>
-    
-            </div>
-    
-            <div class="Redes">
-    
-                <div class="Img__Redes">
-                    <img src="../Img/Twitter.png" alt="Spotify logo">
-                </div>
-    
-                <div class="Descripcion__Redes">
-                    Twitter/cafeanimepod
-                </div>
-            
-        </section>
-
-        <!--formulario contacto-->
-    
-        <h3>¿Nos querés escribir algo? ¡Queremos leerte</h3>
-
-        <p>Completa este simple formulario y te vamos a estar respondiendo ASAP!!</p>
-
-        <section>
-            Formulario
-        </section>
+        </main>
         
         <!--footer-->
-
         <footer>
             Café Anime 2022
         </footer>
 
+        <script src="../Js/bootstrap.min.js"></script>
+        <script src="../Js/bootstrap.bundle.min.js"></script>
     </body>
 
 </html>

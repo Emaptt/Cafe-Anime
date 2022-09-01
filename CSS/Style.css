@@ -154,17 +154,6 @@ p, h3{
         height: 25px;
     }
 
-    .Menu__Barra{
-        display: flex;
-        flex-direction: column;
-        height: 150px;
-    }
-
-    .btn__menu{
-        width: 80px;
-        justify-content: center;
-    }
-
     /* main y pagina 3 */
 
     .Imagen__Noticia{

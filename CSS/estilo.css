@@ -1,0 +1,79 @@
+/*estilos universales*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto"; }
+
+/*estilos Index*/
+body {
+  background-color: #029cdc;
+  background-image: url(../Img/Fondocortado.jpg);
+  /*estilos header*/
+  /*estilos main*/
+  /*estilos footer*/ }
+  body .Portada {
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center; }
+    body .Portada h1 {
+      text-align: center;
+      font-size: 150px;
+      color: #029cdc; }
+    body .Portada .Taza {
+      display: flex;
+      height: 100px; }
+  body .navbar {
+    background-color: #00273e !important; }
+    body .navbar a {
+      text-decoration: none;
+      color: white !important; }
+      body .navbar a .img__logo {
+        height: 30px;
+        border-radius: 8px; }
+  body h2 {
+    margin: 10px; }
+  body .Noticias {
+    display: grid;
+    grid-row-gap: 1px; }
+    body .Noticias article {
+      border: 1px solid black;
+      display: grid;
+      grid-template-columns: 8fr 1fr;
+      height: 120px;
+      transition: height 0.5s; }
+      body .Noticias article:hover {
+        height: 200px; }
+      body .Noticias article .Texto__Noticia h3 {
+        margin: 5px 10px; }
+      body .Noticias article .Texto__Noticia p {
+        margin: 5px; }
+      body .Noticias article .Imagen__Noticia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; }
+  body footer {
+    display: flex;
+    justify-content: flex-end; }
+
+body {
+  /*estilos mobile*/ }
+  @media screen and (max-width: 768px) {
+    body {
+      /* main */
+      /* main y pagina 3 */ }
+      body .Portada h1 {
+        font-size: 35px; }
+      body .Portada .Taza {
+        height: 25px; }
+      body article {
+        grid-template-rows: 80% 20%;
+        grid-template-columns: none;
+        overflow: hidden;
+        height: 500px; }
+        body article .Imagen__Noticia {
+          order: -1; }
+          body article .Imagen__Noticia img {
+            width: 100%; } }

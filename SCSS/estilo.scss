@@ -43,7 +43,7 @@ body{
     
         .Taza{
             display: flex;
-            @include sizes(100px,100px );
+            @include sizes(100px,100px);
         }
     }
     
@@ -199,15 +199,16 @@ body{
                 }
             
                 .Taza{
-                    height: 25px;
+                    @include sizes(25px,25px);
                 }
             }
         
             /* main y pagina 3 */
         
             article{
+                display: grid;
                 grid-template-rows: 80% 20%;
-                grid-template-columns: 1;
+                grid-template-columns: 1fr;
                 overflow: hidden;
                 height: 500px;
         
@@ -241,7 +242,7 @@ body{
                 }
             
                 .Taza{
-                    height: 50px;
+                    @include sizes(50px,50px);
                 }
             }
 

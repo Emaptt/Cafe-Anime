@@ -95,10 +95,12 @@ body {
       body .Portada h1 {
         font-size: 35px; }
       body .Portada .Taza {
-        height: 25px; }
+        height: 25px;
+        width: 25px; }
       body article {
+        display: grid;
         grid-template-rows: 80% 20%;
-        grid-template-columns: 1;
+        grid-template-columns: 1fr;
         overflow: hidden;
         height: 500px; }
         body article .Imagen__Noticia {

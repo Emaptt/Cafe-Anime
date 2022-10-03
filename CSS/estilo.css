@@ -10,69 +10,78 @@ body {
   background-color: #029cdc;
   background-image: url(../Img/Fondocortado.jpg);
   /*estilos header*/ }
-  body .Portada {
+  body header .Portada {
     background-image: linear-gradient(#df4b04, black);
     display: flexbox;
     justify-content: space-around;
     align-items: center; }
-    body .Portada .titulo {
+    body header .Portada .titulo {
       display: flex;
       justify-content: center;
       padding: 10px 0px 0px 0px; }
-      body .Portada .titulo h1 {
+      body header .Portada .titulo h1 {
         text-align: center;
         font-size: 50px;
-        color: #f4560c; }
-      body .Portada .titulo .imagen-titulo {
+        color: white; }
+      body header .Portada .titulo .imagen-titulo {
         display: flex;
         height: 60px;
         width: 375px; }
-    body .Portada .navbar {
+    body header .Portada .navbar {
       background-color: transparent !important;
       padding: 10px 25px; }
-      body .Portada .navbar a {
+      body header .Portada .navbar a {
         text-decoration: none;
         color: white !important; }
-        body .Portada .navbar a .img__logo {
+        body header .Portada .navbar a .img__logo {
           height: 30px;
           width: 30px;
           border-radius: 8px; }
-  body h2 {
-    margin: 10px; }
   body main {
-    padding: 25px;
-    /*estilos main*/
+    padding: 50px;
     /*estilos pagina 4*/
     /*estilos pagina 5*/
     /*estilos footer*/ }
+    body main .ultimo-capitulo {
+      padding: 0px 0px 50px 0px; }
+      body main .ultimo-capitulo h2 {
+        margin: 10px; }
     body main .Noticias {
       display: grid;
-      grid-row-gap: 1px; }
+      grid-row-gap: 10px; }
       body main .Noticias article {
         border: 1px solid black;
+        border-radius: 5px;
         display: grid;
         grid-template-columns: 8fr 1fr;
         height: 120px;
         transition: height 0.5s; }
         body main .Noticias article:hover {
-          height: 200px; }
-        body main .Noticias article .Texto__Noticia h3 {
-          margin: 5px 10px; }
-        body main .Noticias article .Texto__Noticia p, body main .Noticias article .Texto__Noticia h3 {
-          margin: 5px; }
+          height: 200px;
+          width: 101%; }
+        body main .Noticias article a {
+          text-decoration: none;
+          color: black; }
+          body main .Noticias article a .Texto__Noticia h3 {
+            margin: 5px 10px; }
+          body main .Noticias article a .Texto__Noticia p, body main .Noticias article a .Texto__Noticia .contacto h3, body main .contacto .Noticias article a .Texto__Noticia h3 {
+            margin: 5px; }
         body main .Noticias article .Imagen__Noticia {
           display: flex;
           justify-content: center;
           align-items: center;
           overflow: hidden; }
-    body main p, body main h3 {
+    body main p, body main .contacto h3 {
       margin: 10px; }
     body main .introduccion {
-      display: flex;
-      align-items: center; }
+      padding: 20px 0px 50px; }
     body main .Descripcion__Nosotros {
       display: flex;
       justify-content: space-around; }
+    body main .contacto {
+      padding: 25px 0px; }
+      body main .contacto h2 {
+        padding: 20px 0px; }
     body main .Redes__Sociales {
       display: grid;
       grid-template-rows: repeat(3 1fr);
@@ -93,6 +102,10 @@ body {
             display: flex;
             align-items: center;
             padding: 50px; }
+    body main .Formulario {
+      padding: 50px 0px; }
+      body main .Formulario h3 {
+        padding: 10px 0px; }
     body main .persona {
       padding: 5px;
       height: 400px;
@@ -105,7 +118,19 @@ body {
         overflow: hidden; }
       body main .persona .descripcion-persona {
         padding: 20px; }
-    body main footer, body main .Btn__Formulario {
+    body main .pagina-noticia {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); }
+      body main .pagina-noticia .detalle-noticia {
+        grid-area: 1/2; }
+      body main .pagina-noticia .img-detalle-noticia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; }
+      body main .pagina-noticia .btn-end-detalle-noticia {
+        grid-column-start: 2; }
+    body main footer, body main .Formulario .btn-end, body main .Formulario .pagina-noticia .btn-end-detalle-noticia, body main .pagina-noticia .Formulario .btn-end-detalle-noticia {
       display: flex;
       justify-content: flex-end; }
 
@@ -113,24 +138,29 @@ body {
   /*estilos mobile*/ }
   @media screen and (max-width: 768px) {
     body {
-      /* main */
-      /* main y pagina 3 */
-      /* pagina 4 */ }
-      body .Portada h1 {
-        font-size: 35px; }
-      body .Portada .Taza {
-        height: 25px;
-        width: 25px; }
-      body article {
-        display: grid;
-        grid-template-rows: 80% 20%;
-        grid-template-columns: 1fr;
-        overflow: hidden;
-        height: 500px; }
-        body article .Imagen__Noticia {
-          order: -1; }
-          body article .Imagen__Noticia img {
-            width: 100%; }
-      body .Descripcion__Nosotros {
-        display: grid;
-        grid-row-gap: 50px; } }
+      /* main */ }
+      body main {
+        padding: 20px;
+        /* main y pagina 3 */
+        /* pagina 4 */ }
+        body main h1 {
+          font-size: 30px; }
+        body main .Noticias article {
+          display: grid;
+          grid-template-rows: 80% 20%;
+          grid-template-columns: 1fr;
+          overflow: hidden;
+          height: 500px; }
+          body main .Noticias article .Imagen__Noticia {
+            order: -1; }
+            body main .Noticias article .Imagen__Noticia img {
+              width: 100%; }
+        body main .introduccion iframe {
+          width: 100%; }
+        body main .Descripcion__Nosotros {
+          display: grid;
+          grid-row-gap: 50px; }
+        body main .persona {
+          height: auto;
+          grid-template-columns: 1fr;
+          grid-template-rows: 40% 50%; } }

@@ -28,63 +28,69 @@ body{
     background-image:url(../Img/Fondocortado.jpg);
 
     /*estilos header*/
+    header{
 
-    .Portada{
-        background-image: linear-gradient($orange-color, black);
-        display: flexbox;
-        justify-content: space-around;
-        align-items: center;
+        .Portada{
+            background-image: linear-gradient($orange-color, black);
+            display: flexbox;
+            justify-content: space-around;
+            align-items: center;
 
-        .titulo{
-            display: flex;
-            justify-content: center;
-            padding: 10px 0px 0px 0px;
-            
-            h1{
-                text-align: center;
-                font-size: 50px;
-                color: rgba(244,86,12,255);
-            }
-        
-            .imagen-titulo{
+            .titulo{
                 display: flex;
-                @include sizes(60px,375px);
+                justify-content: center;
+                padding: 10px 0px 0px 0px;
+
+                h1{
+                    // font-family: "Engcomic";
+                    text-align: center;
+                    font-size: 50px;
+                    color: white;
+                }
+
+                .imagen-titulo{
+                    display: flex;
+                    @include sizes(60px,375px);
+                }
             }
-        }
-    
-        .navbar{
-            background-color: transparent !important;
-            padding: 10px 25px;
-        
-            a{
-                text-decoration: none;
-                color: white !important;
-        
-                .img__logo{
-                    @include sizes(30px, 30px);
-                    border-radius: 8px;
+
+            .navbar{
+                background-color: transparent !important;
+                padding: 10px 25px;
+
+                a{
+                    text-decoration: none;
+                    color: white !important;
+
+                    .img__logo{
+                        @include sizes(30px, 30px);
+                        border-radius: 8px;
+                    }
                 }
             }
         }
     }
 
-    h2{
-        margin: 10px;
-    }
-
-        // estilos index
+    // estilos index
 
     main{
-        padding: 25px;
+        padding: 50px;
 
-        /*estilos main*/
+        .ultimo-capitulo{
+            padding: 0px 0px 50px 0px;
+
+            h2{
+                margin: 10px;
+            }
+        }
 
         .Noticias{
             display: grid;
-            grid-row-gap: 1px;
+            grid-row-gap: 10px;
 
             article{
                 border: 1px solid black;
+                border-radius: 5px;
                 display: grid;
                 grid-template-columns: 8fr 1fr;
                 height: 120px;
@@ -92,25 +98,32 @@ body{
 
                 &:hover{
                     height: 200px;
+                    width: 101%;
                 }
 
-                .Texto__Noticia{
+                a{
+                    text-decoration: none;
+                    color: black;
 
-                    h3{
-                        margin: 5px 10px;
-                    }
+                    .Texto__Noticia{
 
-                    p{
-                        margin: 5px;
+                        h3{
+                            margin: 5px 10px;
+                        }
+
+                        p{
+                            margin: 5px;
+                        }
                     }
                 }
-
+                    
                 .Imagen__Noticia{
                     display: map-get($map: $estilo-imagen, $key: dis);
                     justify-content: map-get($map: $estilo-imagen, $key: centro);
                     align-items: map-get($map: $estilo-imagen, $key: centro);
                     overflow: map-get($map: $estilo-imagen, $key: over);
                 }
+                
             }
         }
 
@@ -121,8 +134,7 @@ body{
         }
 
         .introduccion{
-            display: flex;
-            align-items: center;
+            padding: 20px 0px 50px;
         }
 
         .Descripcion__Nosotros{
@@ -132,18 +144,28 @@ body{
 
         /*estilos pagina 5*/
 
-        h3 { 
-            @extend p;
+        .contacto{
+            padding: 25px 0px;
+
+            h2{
+                padding: 20px 0px
+            }
+            
+            h3 {
+                @extend p;
+            }
         }
+
         
+
         .Redes__Sociales{
             display: grid;
             grid-template-rows: repeat(3 1fr);
             grid-row-gap: 25px;
-            
+
             a{
                 text-decoration: none;
-                
+
                 .Redes{
                     display: grid;
                     grid-template-columns: 1fr 8fr;
@@ -166,10 +188,19 @@ body{
             }
         }
 
-        .Btn__Formulario{
-            @extend footer;
+        .Formulario{
+            padding: 50px 0px;
+
+            h3{
+                padding: 10px 0px;
+            }
+            .btn-end{
+                @extend footer;
+            }
         }
+
         
+
         // estilos pagina 6
 
         .persona{
@@ -190,9 +221,28 @@ body{
             }
         }
 
+        // estilos paginas de noticias
 
+        .pagina-noticia{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
 
+            .detalle-noticia{
+                grid-area: 1/2;
+            }
 
+            .img-detalle-noticia{
+                display: map-get($map: $estilo-imagen, $key: dis);
+                justify-content: map-get($map: $estilo-imagen, $key: centro);
+                align-items: map-get($map: $estilo-imagen, $key: centro);
+                overflow: map-get($map: $estilo-imagen, $key: over);
+            }
+
+            .btn-end-detalle-noticia{
+                @extend .btn-end;
+                grid-column-start: 2;
+            }
+        }
 
         /*estilos footer*/
 
@@ -210,13 +260,13 @@ body{
         @media screen and (min-width: 1201px) {
 
             /* main */
-        
+
             .Imagen__Noticia{
-        
+
                 img{
                     width: 100%;
                 }
-            } 
+            }
 
             /* pagina 5 */
 
@@ -225,8 +275,8 @@ body{
                 justify-content: space-around;
             }
 
-            .Formulario{
-                padding: 10px 300px;
+            .form{
+                width: 500px;
             }
         }
     } @else if $vista == mobile{
@@ -235,41 +285,57 @@ body{
         @media screen and (max-width: 768px) {
 
             /* main */
-        
-            .Portada{
-        
+            main{
+                padding: 20px;
+
                 h1{
-                    font-size: 35px;
+                    font-size: 30px;
                 }
-            
-                .Taza{
-                    @include sizes(25px,25px);
+                
+
+                /* main y pagina 3 */
+
+                .Noticias{
+
+                    article{
+                        display: grid;
+                        grid-template-rows: 80% 20%;
+                        grid-template-columns: 1fr;
+                        overflow: hidden;
+                        height: 500px;
+
+
+                        .Imagen__Noticia{
+                            order: -1;
+
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
                 }
-            }
-        
-            /* main y pagina 3 */
-        
-            article{
-                display: grid;
-                grid-template-rows: 80% 20%;
-                grid-template-columns: 1fr;
-                overflow: hidden;
-                height: 500px;
-        
-                .Imagen__Noticia{
-                    order: -1;
-        
-                    img{
+
+                /* pagina 4 */
+
+                .introduccion{
+                    iframe{
                         width: 100%;
                     }
                 }
-            }
-            
-            /* pagina 4 */
 
-            .Descripcion__Nosotros{
-                display: grid;
-                grid-row-gap: 50px;
+                .Descripcion__Nosotros{
+                    display: grid;
+                    grid-row-gap: 50px;
+                }
+
+                // estilos pagina 6, 7, 8
+
+                .persona{
+                    height: auto;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 40% 50%;
+                }
+
             }
         }
     } @else {
@@ -280,11 +346,11 @@ body{
             /* main */
 
             .Portada{
-                
+
                 h1{
                     font-size: 75px;
                 }
-            
+
                 .Taza{
                     @include sizes(50px,50px);
                 }
@@ -296,7 +362,7 @@ body{
                     width: 100%;
                     height: 100%;
                 }
-            } 
+            }
         }
     }
 }

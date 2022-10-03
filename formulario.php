@@ -1,6 +1,6 @@
 <?php
 
-$correo = $_POST['correo'];
+$email = $_POST['email'];
 $mensaje = $_POST['mensaje'];
 
 $formcontent="

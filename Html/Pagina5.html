@@ -68,10 +68,11 @@
         <main>
 
             <!-- Contacto -->
-            <h2>Contacto</h2>
-            <h3>¡Seguinos en nuestras redes sociales!</h3>
-            <p>Encontrá todos los episodios completos de Café Anime en Spotify. También seguinos en Instragram y Twitter para mantenerte actualizado con todas nuestras noticias animeísticas.</p>
-        
+            <div class="contacto">
+                <h2>Contacto</h2>
+                <h3>¡Seguinos en nuestras redes sociales!</h3>
+                <p>Encontrá todos los episodios completos de Café Anime en Spotify. También seguinos en Instragram y Twitter para mantenerte actualizado con todas nuestras noticias animeísticas.</p>
+            </div>
             <!--redes sociales-->
             <section class="Redes__Sociales">
 
@@ -111,23 +112,27 @@
             </section>
 
             <!--formulario contacto-->
-            <h3>¡Oyentes de Café Anime, este mensaje es para ustedes!</h3>
-            <p>¿Hay algún tema que te interese que hablemos? ¿Tenés dudas sobre algo del mundo otaku? 
-                ¡Completá este formulario y contános!
-            </p>
-            <form class="Formulario" method="post" action="formulario.php" >
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Escribí tu mail aca" name="correo">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">¿Qué nos querés contar?</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje"></textarea>
-                </div>
-                <div class="Btn__Formulario">
-                    <input class="btn btn-primary" type="submit" value="Enviar">
-                </div>
-            </form>
+            <div class="Formulario">
+                <h3>¡Oyentes de Café Anime, este mensaje es para ustedes!</h3>
+                <p>¿Hay algún tema que te interese que hablemos? ¿Tenés dudas sobre algo del mundo otaku? 
+                    ¡Completá este formulario y contános!
+                </p>
+                <div class="form">
+                    <form method="post" action="formulario.php">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Escribí tu mail aca" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">¿Qué nos querés contar?</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje"></textarea>
+                        </div>
+                        <div class="btn-end">
+                            <input class="btn btn-primary" type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </div>    
+            </div>
 
         </main>
         
